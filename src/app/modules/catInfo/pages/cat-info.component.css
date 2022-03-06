@@ -1,0 +1,282 @@
+.search__div {
+  width: 100%;
+  color: #fff;
+  background-color: #050709;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+}
+
+.search__div h2 {
+  font-family: Mystery Quest;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.search__div h2 img {
+  width: 80.82px;
+  height: 65.22px;
+}
+
+.search__div .form-search {
+  max-width: 394.62px;
+  position: relative;
+}
+
+.search__div input {
+  border: 0;
+  background: #ffffff;
+  border-radius: 59px;
+  color: #291507 !important;
+  font-family: Montserrat;
+  font-style: normal;
+  height: 69.67px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  left: 204px;
+  top: 423.03px;
+  padding-left: 20px;
+  outline: none;
+  width: 100%;
+}
+
+.search__div input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.search__div input::placeholder {
+  color: #291507 !important;
+}
+
+.search__div input + i {
+  position: absolute;
+  padding: 25px;
+  right: 0%;
+  color: #291507;
+  min-width: 30px;
+  z-index: 10;
+}
+
+.img__cat {
+  height: 538px;
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  .search__div {
+    min-height: 538px;
+    padding: 30px;
+  }
+
+  .search__div h2 {
+    font-size: 64px;
+    line-height: 87px;
+  }
+
+  .search__div p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+/* Teléfonos */
+@media (max-width: 575px) {
+  .search__div {
+    max-height: 150px !important;
+  }
+
+  .search__div h2 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .search__div h2 img {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .search__div p {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .search__div input {
+    border: 0;
+    background: #ffffff;
+    border-radius: 59px;
+    color: #291507 !important;
+    font-family: Montserrat;
+    font-style: normal;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    left: 204px;
+    top: 423.03px;
+    padding-left: 10px;
+    outline: none;
+    height: 30.7px;
+  }
+  .search__div input::placeholder {
+    color: #291507 !important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .search__div input + i {
+    padding: 7px;
+  }
+  .matAutocompletediv {
+    background-color: #fff;
+    border-radius: 24px !important;
+  }
+
+  .img__cat {
+    height: 146px;
+    width: 90%;
+    /* object-fit: cover; */
+  }
+}
+
+/* info__div */
+
+.info__div {
+  padding: 0;
+  margin: 0;
+  background: #e3e1dc;
+  min-height: 538px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.info__div p {
+  color: #291507;
+  font-weight: 500;
+}
+
+.info__div h2 {
+  font-style: normal;
+  font-weight: bold;
+  color: #291507;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.info__div img {
+  max-width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.info__div a {
+  font-weight: 600;
+  color: #291507;
+  text-decoration: none;
+}
+
+@media (min-width: 576) {
+  .info__div p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .info__div h2 {
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  .info__div img {
+    max-width: 220px;
+    height: 220px;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+  .info__div a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+/* Telefono */
+@media (max-width: 575px) {
+  .info__div p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .info__div h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .info__div img {
+    width: 134.77px;
+    height: 134.77px;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+  .info__div a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+/* div__cats */
+.div__cats {
+  min-height: 550px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Telefono */
+@media (max-width: 575px) {
+  .div__cats {
+    flex-direction: column;
+  }
+}
+
+.div__cats h2 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+
+  color: #291507;
+}
+
+.div__cats p:first-child {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #291507;
+}
+
+.div__cats a {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: rgba(41, 21, 7, 0.6);
+}
+.div__cats figure {
+  max-width: 195.49px;
+  max-height: 293.24px;
+}
+.div__cats figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+.rectangle {
+  width: 67.15px;
+  height: 3.21px;
+  background: #4d270c;
+  border-radius: 77px;
+}

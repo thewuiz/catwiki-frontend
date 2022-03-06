@@ -1,0 +1,119 @@
+<app-spinner-loading *ngIf="showSpinner"></app-spinner-loading>
+<div *ngIf="!showSpinner" class="container-fluid pt-4">
+  <div class="row d-flex justify-content-center">
+    <!-- ======================================================================================== -->
+    <!-- ========================== INPUT SEARCH BY BREED NAME ===================================== -->
+
+    <div class="div__container col-12">
+      <div class="search__div col-12 p-0 m-0">
+        <div class="col-6 ps-4 ps-md-5">
+          <h2>
+            CatWiki
+            <img
+              src="assets/img/catwiki-w.png"
+              alt=""
+              class="d-inline-block align-text-top"
+            />
+          </h2>
+          <p>Get to know more about your cat breed</p>
+
+          <form class="form-search">
+            <input
+              type="text"
+              placeholder="Enter your breed"
+              [formControl]="control"
+              [matAutocomplete]="auto"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <mat-autocomplete
+              #auto="matAutocomplete"
+              class="my-mat-autocomplete"
+            >
+              <mat-option
+                *ngFor="let breed of filteredBreeds | async"
+                [routerLink]="['breed', breed.id]"
+              >
+                {{ breed.name }}
+              </mat-option>
+            </mat-autocomplete>
+          </form>
+        </div>
+
+        <div class="col-6 d-flex justify-content-end">
+          <img class="img__cat" src="assets/img/cat.jpg" alt="" />
+        </div>
+      </div>
+      <div class="info__div col-12 p-0 m-0">
+        <div class="ps-3 pe-3 pt-3">
+          <div class="col-12 pe-5">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 ps-md-5">
+                <p>Most Searched Breeds</p>
+                <div class="rectangle"></div>
+                <h2>66+ Breeds For you to discover</h2>
+              </div>
+              <div
+                class="col-sm-12col-md-6 d-flex justify-content-end align-items-end"
+              >
+                <a routerLink="top">
+                  SEE MORE
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 m-0 m-md-4 g-4">
+          <div
+            *ngFor="let cat of cats"
+            class="col d-flex flex-column align-items-center"
+          >
+            <img [src]="cat.image_url" class="card-img-top" [alt]="cat.name" />
+            <a [routerLink]="['breed', cat.id]">{{ cat.name }}</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================================== -->
+      <!-- ============================= Why should you have a cat section======================================= -->
+      <div *ngIf="catsImage.length > 0" class="div__cats pt-5">
+        <div class="col-sm-12 col-md-7 ps-md-5">
+          <div class="rectangle"></div>
+          <h2>
+            Why should you have a cat?
+          </h2>
+          <p>
+            Having a cat around you can actually trigger the release of calming
+            chemicals in your body which lower your stress and anxiety leves
+          </p>
+          <a
+            href="https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm#:~:text=Owning%20a%20cat%20can%20bring,be%20an%20extremely%20rewarding%20relationship."
+          >
+            READ MORE
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-5">
+          <div class="row row-cols-2 g-3">
+            <div class="col d-flex flex-column align-items-center">
+              <figure>
+                <img [src]="catsImage[0].url" class="p-1" />
+              </figure>
+              <figure>
+                <img [src]="catsImage[1].url" class="p-1" />
+              </figure>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+              <figure>
+                <img class="p-1" [src]="catsImage[2].url" />
+              </figure>
+              <figure>
+                <img class="p-1" [src]="catsImage[3].url" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

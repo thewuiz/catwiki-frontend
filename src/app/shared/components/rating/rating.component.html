@@ -1,0 +1,6 @@
+<div *ngFor="let number of numbers" class="w-100">
+  <div
+    [ngClass]="{ rectangle: number === 1, 'rectangle-outline': number === 0 }"
+    class="m-1 m-md-2"
+  ></div>
+</div>

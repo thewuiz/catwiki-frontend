@@ -1,0 +1,143 @@
+<app-spinner-loading *ngIf="showSpinner === true"></app-spinner-loading>
+<div *ngIf="breed" class="container-fluid pt-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 div__container">
+      <div class="row">
+        <div class="col-md-12 col-lg-5 d-flex justify-content-center">
+          <figure class="breed__img">
+            <img [src]="breed.url" class="" alt="" />
+          </figure>
+        </div>
+        <div class="col-md-12 col-lg-7">
+          <h2>{{ breed.breeds[0].name }}</h2>
+          <div class="justify-text">{{ breed.breeds[0].description }}</div>
+          <div>
+            <span>Temperament:</span>
+            {{ breed.breeds[0].temperament }}
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <span>Origin:</span>
+            {{ breed.breeds[0].origin }}
+          </div>
+          <div>
+            <span>Life Span:</span>
+            {{ breed.breeds[0].life_span }} years
+          </div>
+
+          <div class="div__rating">
+            <div class="row">
+              <div class="col-md-3">
+                <span>Adaptability:</span>
+              </div>
+
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].adaptability"
+                  class="d-flex flex-row align-items-start"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-3">
+                <span>Affection level:</span>
+              </div>
+
+              <div class="col-sm-12 col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].affection_level"
+                  class="d-flex flex-row w-100"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Child Friendly:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].child_friendly"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Grooming:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].grooming"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Intelligence:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].intelligence"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Health issues:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].health_issues"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Social needs:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].social_needs"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <span>Stranger friendly:</span>
+              </div>
+              <div class="col-md-9">
+                <app-rating
+                  [rating]="breed.breeds[0].stranger_friendly"
+                  class="d-flex flex-row"
+                ></app-rating>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Other photos</h2>
+        <div
+          class="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-5"
+        >
+          <div
+            *ngFor="let image of breedImages"
+            class="col d-flex justify-content-center"
+          >
+            <figure class="div__images">
+              <img [src]="image.image_url" class="img__cat" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
