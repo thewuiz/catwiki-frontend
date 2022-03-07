@@ -1,6 +1,8 @@
 # CatwikiFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este proyecto fue creado con: [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+
+You can access the Backend repository 👉 [Catwiki Backend](https://github.com/thewuiz/catwiki-server).
 
 ## Development server
 
@@ -25,3 +27,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## My social networks 📌
+
+- [Twitter](https://twitter.com/Luisangellopz)
+- [Youtube](https://www.youtube.com/channel/UCHJ1DFgxNFEiJ1QAUhKI5ng)
+- [Linkedin](https://www.linkedin.com/in/luis-%C3%A1ngel-l%C3%B3pez-s%C3%A1nchez-325621203/)
